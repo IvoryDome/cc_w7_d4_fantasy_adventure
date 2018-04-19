@@ -25,4 +25,11 @@ public class Monster {
     public void setHealth(int health) {
         this.health = health;
     }
+
+    public String attackPlayer(Player player){
+        int playerHealth;
+        playerHealth = player.getHealth();
+        player.setHealth(playerHealth -= damage);
+        return "RAWR! I attack " + player.getName() + " for " + damage + "damage!";
+    }
 }

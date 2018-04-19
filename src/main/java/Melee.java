@@ -7,7 +7,6 @@ public abstract class Melee extends Player{
 
     public Melee(String name, int health) {
         super(name, health);
-        this.equippedWeapon = equippedWeapon;
         this.armoury = new ArrayList<Weapon>();
     }
 

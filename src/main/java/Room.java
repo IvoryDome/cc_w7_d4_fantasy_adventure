@@ -32,6 +32,7 @@ public class Room {
 
     public void setPlayersInRoom(ArrayList<Player> playersInRoom) {
         this.playersInRoom = playersInRoom;
+        //
     }
 
     public void removeMonster(Monster monster) {

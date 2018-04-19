@@ -30,11 +30,8 @@ public class Game {
     }
 
 
-    public void addPlayersInGameToPlayersInRoom{
-
-
-
-
+    public void addPlayersInGameToPlayersInRoom(Room room){
+        room.setPlayersInRoom(playersInGame);
     }
 
 
