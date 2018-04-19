@@ -1,20 +1,14 @@
 import java.util.ArrayList;
 
-public class Melee extends Player{
+public abstract class Melee extends Player{
 
-    private MeleeType type;
     private Weapon equippedWeapon;
     private ArrayList<Weapon> armoury;
 
-    public Melee(String name, int health, MeleeType type, Weapon equippedWeapon) {
+    public Melee(String name, int health) {
         super(name, health);
-        this.type = type;
         this.equippedWeapon = equippedWeapon;
         this.armoury = new ArrayList<Weapon>();
-    }
-
-    public MeleeType getType() {
-        return type;
     }
 
     public Weapon getEquippedWeapon() {
@@ -32,4 +26,12 @@ public class Melee extends Player{
     public void setArmoury(ArrayList<Weapon> armoury) {
         this.armoury = armoury;
     }
+
+    public void pickUpWeapon(Weapon weapon){
+        this.armoury.add(weapon);
+    }
+
+
+
+
 }
