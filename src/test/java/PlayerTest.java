@@ -11,7 +11,7 @@ public class PlayerTest {
 
     @Before
     public void before(){
-        meleePlayer1 = new Melee("Grug", 100);
+        meleePlayer1 = new Dwarf("Grug", 100);
         weapon1 = new Weapon(WeaponType.SWORD, "William Wallace's Claymore", 50);
     }
 
