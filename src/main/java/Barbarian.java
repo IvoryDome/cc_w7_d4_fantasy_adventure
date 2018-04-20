@@ -13,9 +13,7 @@ public class Barbarian extends Melee implements IFightable{
     }
 
     public String attack(Monster monster){
-        int monsterHealth;
-        monsterHealth = monster.getHealth();
-        monster.setHealth(monsterHealth -= equippedWeapon.getDamage());
-        return "'Damn you foul beast!' says our Barbarian as he attacks " + monster.getName() + "and inflicts " + equippedWeapon.getDamage() + "!";
+        monster.takeDamage(equippedWeapon.getDamage());
+        return "'!' says our Barbarian as he attacks " + monster.getName() + "and inflicts " + equippedWeapon.getDamage() + "!";
     }
 }

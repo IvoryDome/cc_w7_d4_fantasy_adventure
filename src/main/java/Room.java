@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Room {
 
@@ -47,7 +48,33 @@ public class Room {
         if ((monster == null) && (treasure == null)){
             playersInRoom.clear();
         }
-    }
+
+        private RoomType createRandomRoomType(){
+            Random random = new Random();
+            int value = random.nextInt(1);
+            if(value == 0){
+                return RoomType.TREASURE;
+            }
+            else
+                return RoomType.CREATURE;
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+
 
 
 

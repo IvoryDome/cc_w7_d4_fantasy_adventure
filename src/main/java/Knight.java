@@ -13,9 +13,7 @@ public class Knight extends Melee implements IFightable{
     }
 
     public String attack(Monster monster){
-        int monsterHealth;
-        monsterHealth = monster.getHealth();
-        monster.setHealth(monsterHealth -= equippedWeapon.getDamage());
-        return "'Damn you foul beast!' says our Knight as he attacks " + monster.getName() + "and inflicts " + equippedWeapon.getDamage() + "!";
+        monster.takeDamage(equippedWeapon.getDamage());
+        return "'For the King!' says our Knight as he attacks " + monster.getName() + "and inflicts " + equippedWeapon.getDamage() + "!";
     }
 }

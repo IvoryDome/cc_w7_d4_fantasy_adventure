@@ -29,6 +29,9 @@ public abstract class Player {
         this.loot.add(treasure);
     }
 
+    public void takeDamage(int damageTaken){
+        this.health -= damageTaken;
+    }
 
 
 }

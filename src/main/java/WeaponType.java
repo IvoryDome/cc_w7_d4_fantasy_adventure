@@ -5,7 +5,8 @@ public enum WeaponType {
     AXE("Axe"),
     CLUB("Club"),
     SPEAR("Spear"),
-    BOW("Bow");
+    BOW("Bow"),
+    STAFF("Staff");
 
 
     private String type;

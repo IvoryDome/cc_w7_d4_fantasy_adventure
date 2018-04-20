@@ -22,8 +22,8 @@ public class Monster {
         return health;
     }
 
-    public void setHealth(int health) {
-        this.health = health;
+    public void takeDamage(int damageTaken){
+        this.health -= damageTaken;
     }
 
     public String attackPlayer(Player player){
