@@ -1,5 +1,10 @@
+import enemies.Enemy;
+import games.Game;
 import org.junit.Before;
 import org.junit.Test;
+import players.Dwarf;
+import players.Player;
+import rooms.Room;
 
 import java.util.ArrayList;
 
@@ -12,15 +17,15 @@ public class GameTest {
     private ArrayList<Player> players;
     private Room room1;
     private ArrayList<Room> rooms;
-    private Monster monster;
+    private Enemy enemy;
 
     @Before
     public void before() {
         player1 = new Dwarf("Grug", 100);
         players = new ArrayList();
         players.add(player1);
-        monster = new Monster("Balrog of Morgoth", 1000, 2000);
-        room1 = new Room("Haunted Cavern", monster, null);
+        enemy = new Enemy("Balrog of Morgoth", 1000, 2000);
+        room1 = new Room("Haunted Cavern", enemy, null);
         rooms = new ArrayList<>();
         rooms.add(room1);
         game = new Game(players, rooms);
@@ -38,7 +43,7 @@ public class GameTest {
 
 //    @Test
 //    public void roomStartsEmpty(){
-//        assertEquals();
+//        assertEquals(0, game.g);
 //    }
 
     @Test
